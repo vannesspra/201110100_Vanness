@@ -220,22 +220,12 @@
                   <li>Unlimited App Usage</li>
                 </ul>
                 <button
-                  id="navigate-btn"
+                  id="navigate-btn-1"
                   type="button"
                   class="w-100 btn btn-lg btn-outline-dark"
                 >
                   Sign up for free
                 </button>
-                <script>
-                  // Mengambil elemen tombol
-                  var button = document.getElementById("navigate-btn");
-
-                  // Menambahkan event listener untuk mengganti halaman ketika tombol diklik
-                  button.addEventListener("click", function () {
-                    window.location.href =
-                      "screen/cihuahua.html";
-                  });
-                </script>
               </div>
             </div>
           </div>
@@ -253,7 +243,11 @@
                   <li>Unlimited Messages</li>
                   <li>Unlimited App Usage</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-dark">
+                <button
+                  id="navigate-btn-2"
+                  type="button"
+                  class="w-100 btn btn-lg btn-dark"
+                >
                   Get started
                 </button>
               </div>
@@ -273,9 +267,30 @@
                   <li>Unlimited Matches &amp; Messages</li>
                   <li>Unlimited App Usage</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-dark">
+                <button
+                  id="navigate-btn-3"
+                  type="button"
+                  class="w-100 btn btn-lg btn-dark"
+                >
                   Contact us
                 </button>
+                <script>
+                  // Mengambil elemen tombol
+                  var button = document.getElementById("navigate-btn-1");
+                  var button1 = document.getElementById("navigate-btn-2");
+                  var button2 = document.getElementById("navigate-btn-3");
+
+                  // Menambahkan event listener untuk mengganti halaman ketika tombol diklik
+                  button.addEventListener("click", function () {
+                    window.location.href = "screen/cihuahua.html";
+                  });
+                  button1.addEventListener("click", function () {
+                    window.location.href = "screen/labrador.html";
+                  });
+                  button2.addEventListener("click", function () {
+                    window.location.href = "screen/mastiff.html";
+                  });
+                </script>
               </div>
             </div>
           </div>
