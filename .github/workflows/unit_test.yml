@@ -1,17 +1,25 @@
-name: Super-Linter
+name: HTML Linting
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  super-lint:
-    name: Lint code base
+  lint:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Run Super-Linter
-        uses: github/super-linter@v4
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install htmlhint
+      run: npm install -g htmlhint
+
+    - name: Run HTML Linting
+      run: htmlhint .
